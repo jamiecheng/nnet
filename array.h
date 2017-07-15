@@ -177,6 +177,13 @@ public:
             columns_(matrix.at(0).size()),
             array_(matrix) {}
 
+    Array(std::initializer_list<std::initializer_list<double>> list) : rows_(list.size()),
+                                                                       columns_(list.begin()->size()) {
+        for (const auto &row : list) {
+            array_.push_back(std::vector<double>(row.begin(), row.end()));
+        }
+    }
+
     // ---------------------------- modifiers ----------------------------
     inline Array unaryExpr(double(*callback)(double)) {
         Array tmp(array_);

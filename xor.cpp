@@ -9,15 +9,15 @@ int main(int argc, char **argv) {
 
     if (argc > 1) iterations = atoi(argv[1]);
 
-    Array X({{0, 0},
-             {0, 1},
-             {1, 0},
-             {1, 1}});
+    Array X = {{0, 0},
+               {0, 1},
+               {1, 0},
+               {1, 1}};
 
-    Array Y({{0},
-             {1},
-             {1},
-             {0}});
+    Array Y = {{0},
+               {1},
+               {1},
+               {0}};
 
     NN neuralNetwork(X.columns());
     neuralNetwork.addLayer(4, sigmoid, sigmoidDer);

@@ -3,12 +3,14 @@
 
 #include "array.h"
 
-double sigmoid(double x) {
-    return 1.0 / (1.0 + exp(-x));
-}
+namespace nnet {
+    double sigmoid(double x) {
+        return 1.0 / (1.0 + exp(-x));
+    }
 
-double sigmoidDer(double x) {
-    return (1.0 - x) * x;
+    double sigmoidDer(double x) {
+        return (1.0 - x) * x;
+    }
 }
 
 #endif // ACTIVATIONS_H

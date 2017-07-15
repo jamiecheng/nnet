@@ -3,6 +3,7 @@
 #include "../../include/network.h"
 
 using namespace std;
+using namespace nnet;
 
 int main(int argc, char **argv) {
     int iterations{10000};
